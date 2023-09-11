@@ -1,0 +1,5 @@
+chain_command:
+  chain_commands:
+    -
+      root_command: 'foo:hello'
+      member_commands: ['bar:hi']

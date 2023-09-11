@@ -1,0 +1,9 @@
+**/*.DS_Store
+**/.dockerignore
+**/.gitignore
+#**/Dockerfile
+.git/
+.gitattributes
+.gitmodules
+var/*/
+vendor/

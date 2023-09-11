@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+        backupGlobals               = "false"
+        backupStaticAttributes      = "false"
+        colors                      = "true"
+        convertErrorsToExceptions   = "true"
+        convertNoticesToExceptions  = "true"
+        convertWarningsToExceptions = "true"
+        processIsolation            = "false"
+        stopOnFailure               = "false"
+        bootstrap                   = "vendor/autoload.php"
+>
+
+    <testsuite name="Chain Command Bundle Tests">
+        <directory>src/ChainCommandBundle/Tests/Functional/</directory>
+        <directory>src/ChainCommandBundle/Tests/Unit/</directory>
+    </testsuite>
+
+    <php>
+        <env name="SYMFONY_ENV" value="test"/>
+        <env name="SYMFONY_DEBUG" value="0"/>
+        <server name="KERNEL_CLASS" value="App\Kernel" />
+    </php>
+</phpunit>

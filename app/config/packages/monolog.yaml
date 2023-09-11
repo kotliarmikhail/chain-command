@@ -1,0 +1,10 @@
+monolog:
+  channels:
+    - deprecation
+    - chain_command
+  handlers:
+    monolog.handler.chain_command:
+      type: stream
+      path: '%kernel.logs_dir%/chain_command.log'
+      level: debug
+      channels: ['chain_command']

@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+/app/cache/
+/app/logs/
+/app/var/*
+/app/vendor

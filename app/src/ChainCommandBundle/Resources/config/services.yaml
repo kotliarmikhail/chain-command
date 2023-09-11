@@ -1,0 +1,11 @@
+services:
+  chain_command.manager:
+    class: App\ChainCommandBundle\Service\ChainCommandManager
+
+  chain_command.command_listener:
+    class: App\ChainCommandBundle\EventListener\CommandChainListener
+    arguments: ['@chain_command.manager', '@monolog.logger.chain_command']
+    tags:
+      - {name: kernel.event_listener, event: console.command, method: onConsoleCommand}
+      - {name: kernel.event_listener, event: console.terminate, method: onConsoleTerminate}
+
